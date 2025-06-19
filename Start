@@ -79,3 +79,34 @@ local Window = WindUI:CreateWindow({
 
 
 -- запуск основного меню
+
+Window:EditOpenButton({
+    Title = "Open Example UI",
+    Icon = "monitor",
+    CornerRadius = UDim.new(0,16),
+    StrokeThickness = 2,
+    Color = ColorSequence.new( -- gradient
+        Color3.fromHex("FF0F7B"), 
+        Color3.fromHex("F89B29")
+    ),
+    --Enabled = false,
+    Draggable = true,
+})
+
+
+local Tabs = {
+    ParagraphTab = Window:Tab({ Title = "Paragraph", Icon = "type" }),
+    ButtonTab = Window:Tab({ Title = "Button", Icon = "mouse-pointer-2", Desc = "Contains interactive buttons for various actions." }),
+    NotificationTab = Window:Tab({ Title = "Notification", Icon = "bell", Desc = "Configure and view notifications." }),
+    ToggleTab = Window:Tab({ Title = "Toggle", Icon = "toggle-left", Desc = "Switch settings on and off." }),
+    SliderTab = Window:Tab({ Title = "Slider", Icon = "sliders-horizontal", Desc = "Adjust values smoothly with sliders." }),
+    divider1 = Window:Divider(),
+    --
+    WindowTab = Window:Tab({ 
+    
+    }),
+    LockedTab = Window:Tab({ Title = "Locked Tab", Icon = "lock", Desc = "This tab is locked", Locked = true }),
+    TabWithoutIcon = Window:Tab({ Title = "Tab Without icon", ShowTabTitle = true }),
+    
+    
+}
