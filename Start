@@ -1,4 +1,14 @@
 local WindUI = loadstring(game:HttpGet("https://github.com/Footagesus/WindUI/releases/latest/download/main.lua"))()
+--local WindUI = loadstring(readfile("WindUI/version-time-12.06.lua"))()
+
+-- Test
+
+
+
+-- Set theme:
+--WindUI:SetTheme("Light")
+
+--- EXAMPLE !!!
 
 function gradient(text, startColor, endColor)
     local result = ""
@@ -20,10 +30,10 @@ end
 local Confirmed = false
 
 WindUI:Popup({
-    Title = "Welcome Codex!",
+    Title = "Welcome! Popup Example",
     Icon = "rbxassetid://129260712070622",
     IconThemed = true,
-    Content = "lol hub " .. gradient("by SpiderXHub", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " Lib",
+    Content = "This is an Example UI for the " .. gradient("WindUI", Color3.fromHex("#00FF87"), Color3.fromHex("#60EFFF")) .. " Lib",
     Buttons = {
         {
             Title = "Cancel",
@@ -43,10 +53,10 @@ WindUI:Popup({
 
 repeat wait() until Confirmed
 
--- запуск скрипта
+--
 
 local Window = WindUI:CreateWindow({
-    Title = "Codex X Hub",
+    Title = "WindUI Library",
     Icon = "rbxassetid://129260712070622",
     IconThemed = true,
     Author = "Example UI",
@@ -78,7 +88,25 @@ local Window = WindUI:CreateWindow({
 })
 
 
--- запуск основного меню
+-- Window:SetBackgroundImage("rbxassetid://13511292247")
+-- Window:SetBackgroundImageTransparency(0.9)
+
+
+-- TopBar Edit
+
+-- Disable Topbar Buttons
+-- Window:DisableTopbarButtons({
+--     "Close", 
+--     "Minimize", 
+--     "Fullscreen",
+-- })
+
+-- Create Custom Topbar Buttons
+--                        ↓ Name             ↓ Icon          ↓ Callback                           ↓ LayoutOrder
+Window:CreateTopbarButton("MyCustomButton1", "bird",         function() print("clicked 1!") end,  990)
+Window:CreateTopbarButton("MyCustomButton2", "droplet-off",  function() print("clicked 2!") end,  989)
+Window:CreateTopbarButton("MyCustomButton3", "battery-plus", function() print("clicked 3!!") end, 988)
+
 
 Window:EditOpenButton({
     Title = "Open Example UI",
@@ -100,13 +128,287 @@ local Tabs = {
     NotificationTab = Window:Tab({ Title = "Notification", Icon = "bell", Desc = "Configure and view notifications." }),
     ToggleTab = Window:Tab({ Title = "Toggle", Icon = "toggle-left", Desc = "Switch settings on and off." }),
     SliderTab = Window:Tab({ Title = "Slider", Icon = "sliders-horizontal", Desc = "Adjust values smoothly with sliders." }),
+    DropdownTab = Window:Tab({ Title = "Dropdown", Icon = "chevrons-up-down", Desc = "Select from multiple options." }),
     divider1 = Window:Divider(),
     --
     WindowTab = Window:Tab({ 
-    
+        Title = "Window and File Configuration", 
+        Icon = "settings", 
+        Desc = "Manage window settings and file configurations.", 
+        ShowTabTitle = true
+    }),
+
+    CreateThemeTab = Window:Tab({ Title = "Create Theme", Icon = "palette", Desc = "Design and apply custom themes." }),
+    be = Window:Divider(),
+    LongTab = Window:Tab({
+        Title = "Long and empty tab. with custom icon", 
+        Icon = "rbxassetid://129260712070622", -- vector icon (like lucide) in white color 
+        IconThemed = true, 
+        Desc = "Long Description" 
     }),
     LockedTab = Window:Tab({ Title = "Locked Tab", Icon = "lock", Desc = "This tab is locked", Locked = true }),
     TabWithoutIcon = Window:Tab({ Title = "Tab Without icon", ShowTabTitle = true }),
     
     
 }
+
+Window:SelectTab(1)
+
+Tabs.ParagraphTab:Paragraph({
+    Title = "Paragraph with Image & Thumbnail",
+    Desc = "Test Paragraph",
+    Image = "https://play-lh.googleusercontent.com/7cIIPlWm4m7AGqVpEsIfyL-HW4cQla4ucXnfalMft1TMIYQIlf2vqgmthlZgbNAQoaQ",
+    ImageSize = 42, -- default 30
+    Thumbnail = "https://tr.rbxcdn.com/180DAY-59af3523ad8898216dbe1043788837bf/768/432/Image/Webp/noFilter",
+    ThumbnailSize = 120 -- Thumbnail height
+})
+Tabs.ParagraphTab:Paragraph({
+    Title = "Paragraph with Image & Thumbnail & Buttons",
+    Desc = "Test Paragraph",
+    Image = "https://play-lh.googleusercontent.com/7cIIPlWm4m7AGqVpEsIfyL-HW4cQla4ucXnfalMft1TMIYQIlf2vqgmthlZgbNAQoaQ",
+    ImageSize = 42, -- default 30
+    Thumbnail = "https://tr.rbxcdn.com/180DAY-59af3523ad8898216dbe1043788837bf/768/432/Image/Webp/noFilter",
+    ThumbnailSize = 120, -- Thumbnail height
+    Buttons = {
+        {
+            Title = "Button 1",
+            Variant = "Primary",
+            Callback = function() print("1 Button") end,
+            Icon = "bird",
+        },
+        {
+            Title = "Button 2",
+            Variant = "Primary",
+            Callback = function() print("2 Button") end,
+            Icon = "bird",
+        },
+        {
+            Title = "Button 3",
+            Variant = "Primary",
+            Callback = function() print("3 Button") end,
+            Icon = "bird",
+        },
+    }
+})
+
+Tabs.ParagraphTab:Divider()
+
+for _,i in next, { "Default", "Red", "Orange", "Green", "Blue", "Grey", "White" } do
+    Tabs.ParagraphTab:Paragraph({
+        Title = i,
+        Desc = "Paragraph with color",
+        Image = "bird",
+        Color = i ~= "Default" and i or nil,
+        Buttons = {
+            {
+                Title = "Button 1",
+                Variant = "Primary",
+                Callback = function() print("1 Button") end,
+                Icon = "bird",
+            },
+            {
+                Title = "Button 2",
+                Variant = "Primary",
+                Callback = function() print("2 Button") end,
+                Icon = "bird",
+            },
+            {
+                Title = "Button 3",
+                Variant = "Primary",
+                Callback = function() print("3 Button") end,
+                Icon = "bird",
+            },
+        }
+    })
+end
+
+
+
+Tabs.ButtonTab:Button({
+    Title = "Click Me",
+    Desc = "This is a simple button",
+    Callback = function() print("Button Clicked!") end
+})
+
+
+local destroybtn
+destroybtn = Tabs.ButtonTab:Button({
+    Title = "Click to destroy me!",
+    Callback = function() destroybtn:Destroy() end,
+})
+
+Tabs.ButtonTab:Button({
+    Title = "Submit",
+    Desc = "Click to submit",
+    Callback = function() print("Submitted!") end,
+})
+
+Tabs.ButtonTab:Button({
+    Title = "Set ToggleKey to 'F'",
+    Callback = function() Window:SetToggleKey(Enum.KeyCode.F) end,
+})
+
+Tabs.ButtonTab:Divider()
+
+
+Tabs.ButtonTab:Button({
+    Title = "Locked Button",
+    Desc = "This button is locked",
+    Locked = true,
+})
+
+
+Tabs.NotificationTab:Button({
+    Title = "Notification with custom icon",
+    Callback = function() 
+        WindUI:Notify({
+            Title = "Notification Example 2",
+            Content = "Content",
+            Icon = "rbxassetid://129260712070622",
+            IconThemed = true, -- automatic color icon to theme 
+            Duration = 5,
+        })
+    end
+})
+
+Tabs.NotificationTab:Button({
+    Title = "Notification with BackgroundImage",
+    Callback = function() 
+        WindUI:Notify({
+            Title = "Notification Example 3",
+            Content = "with BackgroundImage",
+            Icon = "image",
+            Duration = 5,
+            Background = "rbxassetid://13511292247"
+        })
+    end
+})
+
+
+Tabs.ToggleTab:Toggle({
+    Title = "Enable Feature",
+    --Image = "bird",
+    Value = true,
+    Callback = function(state) print("Feature enabled: " .. tostring(state)) end
+})
+
+Tabs.ToggleTab:Toggle({
+    Title = "Activate Mode",
+    Value = false,
+    Callback = function(state) print("Mode activated: " .. tostring(state)) end
+})
+Tabs.ToggleTab:Toggle({
+    Title = "Toggle with icon",
+    Icon = "check",
+    Value = false,
+    Callback = function(state) print("Toggle with icon activated: " .. tostring(state)) end
+})
+
+Tabs.ToggleTab:Toggle({
+    Title = "New Toggle Type 'Checkbox'",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) print("'Checkbox' Toggle activated: " .. tostring(state)) end
+})
+Tabs.ToggleTab:Toggle({
+    Title = "New Toggle Type 'Checkbox' with custom icon",
+    Icon = "bird",
+    Type = "Checkbox",
+    Value = false,
+    Callback = function(state) print("'Checkbox' Toggle with icon activated: " .. tostring(state)) end
+})
+
+
+Tabs.SliderTab:Slider({
+    Title = "Volume Slider",
+    Value = {
+        Min = 0,
+        Max = 100,
+        Default = 50,
+    },
+    Callback = function(value) print("Volume set to: " .. value) end
+})
+
+Tabs.SliderTab:Slider({
+    Title = "Brightness Slider",
+    Value = {
+        Min = 1,
+        Max = 100,
+        Default = 75,
+    },
+    Callback = function(value) print("Brightness set to: " .. value) end
+})
+
+Tabs.SliderTab:Slider({
+    Title = "Float Slider",
+    Step = 0.1,
+    Value = {
+        Min = 0,
+        Max = 2.5,
+        Default = 1.5,
+    },
+    Callback = function(value) print("Brightness set to: " .. value) end
+})
+
+
+
+-- Configuration
+-- Optional
+
+
+local HttpService = game:GetService("HttpService")
+
+local folderPath = "WindUI"
+makefolder(folderPath)
+
+local function SaveFile(fileName, data)
+    local filePath = folderPath .. "/" .. fileName .. ".json"
+    local jsonData = HttpService:JSONEncode(data)
+    writefile(filePath, jsonData)
+end
+
+local function LoadFile(fileName)
+    local filePath = folderPath .. "/" .. fileName .. ".json"
+    if isfile(filePath) then
+        local jsonData = readfile(filePath)
+        return HttpService:JSONDecode(jsonData)
+    end
+end
+
+local function ListFiles()
+    local files = {}
+    for _, file in ipairs(listfiles(folderPath)) do
+        local fileName = file:match("([^/]+)%.json$")
+        if fileName then
+            table.insert(files, fileName)
+        end
+    end
+    return files
+end
+
+Tabs.WindowTab:Section({ Title = "Window", Icon = "app-window-mac" })
+
+local themeValues = {}
+for name, _ in pairs(WindUI:GetThemes()) do
+    table.insert(themeValues, name)
+end
+
+local themeDropdown = Tabs.WindowTab:Dropdown({
+    Title = "Select Theme",
+    Multi = false,
+    AllowNone = false,
+    Value = nil,
+    Values = themeValues,
+    Callback = function(theme)
+        WindUI:SetTheme(theme)
+    end
+})
+themeDropdown:Select(WindUI:GetCurrentTheme())
+
+local ToggleTransparency = Tabs.WindowTab:Toggle({
+    Title = "Toggle Window Transparency",
+    Callback = function(e)
+        Window:ToggleTransparency(e)
+    end,
+    Value = WindUI:GetTransparency()
+})
