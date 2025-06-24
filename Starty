@@ -28,13 +28,15 @@ Tabs.Main:AddParagraph({
         Content = "Player function & Misc"
     })
 
-local Toggle = Tabs.Main:AddToggle("Anti-Fling", {Title = "Anti-Fling", Default = false })
+Tabs.Main:AddButton({
+        Title = "Anti-Fling",
+        Description = "Very important button",
+        Callback = function()
 
-    Toggle:OnChanged(function()
+    Button:OnChanged(function()
         print("work 🟢")
 loadstring(game:HttpGet("https://pastebin.com/raw/w4ACfhhk"))()
     end)
-
 
 
 local Slider = Tabs.Main:AddSlider("Slider", {
