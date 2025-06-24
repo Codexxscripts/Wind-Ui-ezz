@@ -1,7 +1,7 @@
 local link = "t.me/codexxscripts"
 print(link)
 toclipboard(link)
-wait(0.2)
+wait(0.3)
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
