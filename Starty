@@ -50,7 +50,7 @@ local Slider = Tabs.Main:AddSlider("Slider", {
         Description = "This is Speed player",
         Default = 16,
         Min = 0,
-        Max = 500,
+        Max = 1000,
         Rounding = 1,
         Callback = function(Value)
             print("Slider was changed:", Value)
@@ -92,4 +92,21 @@ local Slider = Tabs.Main:AddSlider("Slider", {
     Slider:OnChanged(function(Value)
 
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value 
+end)
+
+local Slider = Tabs.Main:AddSlider("Slider", {
+        Title = "Gravity",
+        Description = "This is Jump player",
+        Default = 192.2,
+        Min = 0,
+        Max = 1000,
+        Rounding = 1,
+        Callback = function(Value)
+            print("Slider was changed:", Value)
+        end
+    })
+
+    Slider:OnChanged(function(Value)
+
+game.workspace.Gravity = Value
 end)
