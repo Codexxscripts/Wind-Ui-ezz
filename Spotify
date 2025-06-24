@@ -205,6 +205,13 @@ Tabs.Tools:AddButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/jurylmao/otherscripts/refs/heads/main/anim1.lua'))()
 end})
 
+Tabs.Tools:AddButton({
+        Title = "Get Fire part 🔥",
+        Description = "This is ilon mask",
+        Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/EnesXVC/FireParts/main/Script"))()
+end})
 
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
