@@ -1,7 +1,7 @@
 local link = "t.me/codexxscripts"
 print(link)
 toclipboard(link)
-wait(0.5)
+wait(0.2)
 
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
@@ -24,7 +24,7 @@ local Tabs = {
 }
 
 Tabs.Main:AddParagraph({
-        Title = "Welcome my hub 🪺",
+        Title = "Welcome my hub 🤖",
         Content = "Player function & Misc"
     })
 
@@ -32,11 +32,11 @@ local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = fals
 
 
 local Slider = Tabs.Main:AddSlider("Slider", {
-        Title = "Slider",
-        Description = "This is a slider",
+        Title = "WalkSpeed",
+        Description = "This is Speed player",
         Default = 16,
         Min = 0,
-        Max = 100,
+        Max = 500,
         Rounding = 1,
         Callback = function(Value)
             print("Slider was changed:", Value)
@@ -44,16 +44,11 @@ local Slider = Tabs.Main:AddSlider("Slider", {
     })
 
     Slider:OnChanged(function(Value)
-        --[[
-	WARNING: Heads up! This script has not been verified by ScriptBlox. Use at your own risk!
-]]
+
 local plrs = game.Players
 local plr = plrs.LocalPlayer
 
 walkspeed = Value; -- defule is 16 :)
--- english super
--- change number on the walkspeed to change speed
--- very pro
 
 if plr then
     local char = plr.Character or plr.CharacterAdded:Wait()
