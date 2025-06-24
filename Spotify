@@ -144,12 +144,12 @@ local Slider = Tabs.Main:AddSlider("Slider", {
 game.workspace.Gravity = Value
 end)
 -- 2 main
-Tabs.GetTools:AddParagraph({
+Tabs.Tools:AddParagraph({
         Title = "Welcome my hub 👀",
         Content = "Get Gamepass & Tools"
     })
 
-Tabs.Main:AddButton({
+Tabs.Tools:AddButton({
         Title = "Get Ballon 🎈",
         Description = "Скрипт работает только если у игрока есть Ballon",
         Callback = function()
