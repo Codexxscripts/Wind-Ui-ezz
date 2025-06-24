@@ -3,6 +3,36 @@ print(link)
 toclipboard(link)
 wait(0.3)
 
+local pid = game.PlaceId
+if pid ~= 189707 then
+    print("Error not found natural disasters survival game!")
+    return
+end
+local rs = game:GetService("RunService")
+local hb = rs.Heartbeat
+local rsd = rs.RenderStepped
+local lp = game.Players.LocalPlayer
+local z = Vector3.zero
+local function f(c)
+    local r = c:WaitForChild("HumanoidRootPart")
+    if r then
+        local con
+        con = hb:Connect(function()
+            if not r.Parent then
+                con:Disconnect()
+            end
+            local v = r.AssemblyLinearVelocity
+            r.AssemblyLinearVelocity = z
+            rsd:Wait()
+            r.AssemblyLinearVelocity = v
+        end)
+    end
+end
+f(lp.Character)
+lp.CharacterAdded:Connect(f)
+
+wait(0.3)
+
 local Fluent = loadstring(game:HttpGet("https://github.com/dawid-scripts/Fluent/releases/latest/download/main.lua"))()
 local SaveManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/SaveManager.lua"))()
 local InterfaceManager = loadstring(game:HttpGet("https://raw.githubusercontent.com/dawid-scripts/Fluent/master/Addons/InterfaceManager.lua"))()
