@@ -167,7 +167,10 @@ end
 if game.Workspace:FindFirstChild("GreenBalloon", true) then -- Check for stealable GreenBalloon 
 	balloonClone = game.Workspace:FindFirstChild("GreenBalloon", true):Clone() -- clone it 
 	balloonClone.Parent = game:GetService("Players").LocalPlayer.Backpack
+	
 
+
+end
     end})
 
 
