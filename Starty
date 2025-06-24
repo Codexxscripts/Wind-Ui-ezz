@@ -66,7 +66,7 @@ end
 local Slider = Tabs.Main:AddSlider("Slider", {
         Title = "Jump Power",
         Description = "This is Jump player",
-        Default = 160,
+        Default = 50,
         Min = 0,
         Max = 1000,
         Rounding = 1,
@@ -78,3 +78,4 @@ local Slider = Tabs.Main:AddSlider("Slider", {
     Slider:OnChanged(function(Value)
 
 game.Players.LocalPlayer.Character.Humanoid.JumpPower = Value 
+end)
