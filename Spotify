@@ -178,7 +178,7 @@ Tabs.Tools:AddButton({
         Description = "Скрипт притягивающий предметы",
         Callback = function()
 
-loadstring(game:HttpGet("https://gist.githubusercontent.com/sovetskii-shashlik/eaeb8a759ac9f84212f4dd86da352d98/raw/5fd3320f6c8ae46a0963c03f30e595915aa14aa5/Shashlik-blackhole.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/SpiderXHubTool/refs/heads/main/Мой%20тгк%20%40SpiderScriptRB.txt"))()
 end})
 
 Tabs.Tools:AddButton({
@@ -197,13 +197,6 @@ Tabs.Tools:AddButton({
 loadstring(game:HttpGet('https://raw.githubusercontent.com/jurylmao/otherscripts/refs/heads/main/anim1.lua'))()
 end})
 
-Tabs.Tools:AddButton({
-        Title = "Get Hug tool 🫂",
-        Description = "it's cuter",
-        Callback = function()
-
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/refs/heads/main/Hug%20Tool%20R6"))("")
-end})
 
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
