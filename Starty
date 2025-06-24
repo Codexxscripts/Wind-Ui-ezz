@@ -23,6 +23,11 @@ local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
 }
 
+Tabs.Main:AddParagraph({
+        Title = "Welcome my hub 🪺",
+        Content = "Player function & Misc"
+    })
+
 local Toggle = Tabs.Main:AddToggle("MyToggle", {Title = "Toggle", Default = false })
 
 
