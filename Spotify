@@ -190,6 +190,14 @@ loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))("Spider Script")
 end})
 
 Tabs.Tools:AddButton({
+        Title = "Grab Parts",
+        Description = "Parts ezzz",
+        Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/Da2RAkmA"))()
+end})
+
+Tabs.Tools:AddButton({
         Title = "Get hand up tool ✋🏼",
         Description = "This is ilon mask",
         Callback = function()
