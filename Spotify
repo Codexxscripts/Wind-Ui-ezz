@@ -181,6 +181,17 @@ Tabs.Tools:AddButton({
 loadstring(game:HttpGet("https://gist.githubusercontent.com/sovetskii-shashlik/eaeb8a759ac9f84212f4dd86da352d98/raw/5fd3320f6c8ae46a0963c03f30e595915aa14aa5/Shashlik-blackhole.lua"))()
 end})
 
+Tabs.Tools:AddButton({
+        Title = "Get Jeff off tool☄️",
+        Description = "Wow, script",
+        Callback = function()
+
+loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))("Spider Script")
+end})
+
+
+
+
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
