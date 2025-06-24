@@ -36,7 +36,14 @@ Tabs.Main:AddButton({
         print("work 🟢")
 loadstring(game:HttpGet("https://pastebin.com/raw/w4ACfhhk"))()
     end})
+Tabs.Main:AddButton({
+        Title = "Anti-Fling Parts",
+        Description = "Very important button",
+        Callback = function()
 
+        print("work 🟢")
+loadstring(game:HttpGet("https://pastebin.com/raw/bh4hvKPB"))()
+    end})
 
 local Slider = Tabs.Main:AddSlider("Slider", {
         Title = "WalkSpeed",
