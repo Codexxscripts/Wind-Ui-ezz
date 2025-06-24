@@ -174,7 +174,7 @@ end
     end})
 
 Tabs.Tools:AddButton({
-        Title = "Get blackHole☄️",
+        Title = "Get blackHole ☄️",
         Description = "Скрипт притягивающий предметы",
         Callback = function()
 
@@ -191,12 +191,19 @@ end})
 
 Tabs.Tools:AddButton({
         Title = "Get hand up tool ✋🏼",
-        Description = "Wow, script",
+        Description = "This is ilon mask",
         Callback = function()
 
 loadstring(game:HttpGet('https://raw.githubusercontent.com/jurylmao/otherscripts/refs/heads/main/anim1.lua'))()
 end})
 
+Tabs.Tools:AddButton({
+        Title = "Get Hug tool 🫂",
+        Description = "it's cuter",
+        Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ECCSco/ECCS-V3/refs/heads/main/Hug%20Tool%20R6"))("")
+end})
 
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
