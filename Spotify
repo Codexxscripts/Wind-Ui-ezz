@@ -182,14 +182,20 @@ loadstring(game:HttpGet("https://gist.githubusercontent.com/sovetskii-shashlik/e
 end})
 
 Tabs.Tools:AddButton({
-        Title = "Get Jeff off tool☄️",
+        Title = "Get Jeff off tool 😢",
         Description = "Wow, script",
         Callback = function()
 
 loadstring(game:HttpGet("https://pastefy.app/wa3v2Vgm/raw"))("Spider Script")
 end})
 
+Tabs.Tools:AddButton({
+        Title = "Get hand up tool ✋🏼",
+        Description = "Wow, script",
+        Callback = function()
 
+loadstring(game:HttpGet('https://raw.githubusercontent.com/jurylmao/otherscripts/refs/heads/main/anim1.lua'))()
+end})
 
 
 SaveManager:SetLibrary(Fluent)
