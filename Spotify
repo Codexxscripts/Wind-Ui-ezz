@@ -173,7 +173,13 @@ if game.Workspace:FindFirstChild("GreenBalloon", true) then -- Check for stealab
 end
     end})
 
+Tabs.Tools:AddButton({
+        Title = "Get blackHole☄️",
+        Description = "Скрипт притягивающий предметы",
+        Callback = function()
 
+loadstring(game:HttpGet("https://gist.githubusercontent.com/sovetskii-shashlik/eaeb8a759ac9f84212f4dd86da352d98/raw/5fd3320f6c8ae46a0963c03f30e595915aa14aa5/Shashlik-blackhole.lua"))()
+end})
 
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
