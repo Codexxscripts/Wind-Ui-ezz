@@ -28,16 +28,14 @@ Tabs.Main:AddParagraph({
         Content = "Player function & Misc"
     })
 
-local Toggle = Tabs.Main:AddToggle("Anti-Fling", {Title = "", Default = false })
+local Toggle = Tabs.Main:AddToggle("Anti-Fling", {Title = "Anti-Fling", Default = false })
 
     Toggle:OnChanged(function()
-        print("work🟢", Options.MyToggle.Value)
+        print("work 🟢")
 loadstring(game:HttpGet("https://pastebin.com/raw/w4ACfhhk"))()
     end)
 
-    Options.MyToggle:SetValue(true)
-print("Stop🔴", Options.MyToggle.Value)
-end
+
 
 local Slider = Tabs.Main:AddSlider("Slider", {
         Title = "WalkSpeed",
