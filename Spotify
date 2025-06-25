@@ -72,7 +72,7 @@ Tabs.Trolling:AddButton({
         Description = "Bye-Bye 🤓",
         Callback = function()
 
-loadstring(game:HttpGet("https://pastebin.com/raw/rvYNTuF8"))()
+loadstring(game:HttpGet("https://pastebin.com/raw/ibtdB9Ay"))()
 end})
 
 Tabs.Trolling:AddButton({
