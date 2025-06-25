@@ -91,7 +91,7 @@ loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/
 end})
 
 Tabs.Trolling:AddParagraph({
-        Title = "       ",
+        Title = " Look my Channel",
         Content = "Bring Parts & More"
     })
 Tabs.Trolling:AddButton({
@@ -225,7 +225,7 @@ Tabs.Tools:AddButton({
         Description = "Скрипт притягивающий предметы",
         Callback = function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/SpiderScriptRB/SpiderXHubTool/refs/heads/main/Мой%20тгк%20%40SpiderScriptRB.txt"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/evilionx3/blackholetool/refs/heads/main/skibidi.lua"))() 
 end})
 
 Tabs.Tools:AddButton({
