@@ -90,6 +90,18 @@ Tabs.Trolling:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
 end})
 
+Tabs.Trolling:AddParagraph({
+        Title = "       ",
+        Content = "Bring Parts & More"
+    })
+Tabs.Trolling:AddButton({
+        Title = "Bring Parts",
+        Description = "",
+        Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/GoofyBlox/GoofyZ/refs/heads/main/Best/Vortex.lua", true))("")
+end})
+
 Tabs.Main:AddParagraph({
         Title = "Welcome my hub 🤖",
         Content = "Player function & Misc"
