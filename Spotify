@@ -61,10 +61,18 @@ Tabs.Trolling:AddParagraph({
     })
 Tabs.Trolling:AddButton({
         Title = "Walk Fling",
-        Description = "This is ilon mask",
+        Description = "Run fling",
         Callback = function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/7dksbpxuw8/Other/refs/heads/main/Walkfling"))()
+end})
+
+Tabs.Trolling:AddButton({
+        Title = "Fling all",
+        Description = "Bye-Bye 🤓",
+        Callback = function()
+
+loadstring(game:HttpGet("https://pastebin.com/raw/rvYNTuF8"))()
 end})
 
 Tabs.Main:AddParagraph({
