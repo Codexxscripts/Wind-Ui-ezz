@@ -55,6 +55,17 @@ local Tabs = {
     Settings = Window:AddTab({ Title = "Settings", Icon = "settings" })
     
 }
+Tabs.Trolling:AddParagraph({
+        Title = "Welcome my hub 😳",
+        Content = "Trolling & More"
+    })
+Tabs.Trolling:AddButton({
+        Title = "Fling Walk",
+        Description = "This is ilon mask",
+        Callback = function()
+
+
+end})
 
 Tabs.Main:AddParagraph({
         Title = "Welcome my hub 🤖",
