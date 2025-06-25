@@ -64,7 +64,7 @@ Tabs.Trolling:AddButton({
         Description = "Run fling",
         Callback = function()
 
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7dksbpxuw8/Other/refs/heads/main/Walkfling"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/0Ben1/fe./main/Fling%20GUI"))()
 end})
 
 Tabs.Trolling:AddButton({
