@@ -77,10 +77,17 @@ end})
 
 Tabs.Trolling:AddButton({
         Title = "head pet",
-        Description = "need a",
+        Description = "An accessory is needed",
         Callback = function()
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty40.lua"))()
+end})
+Tabs.Trolling:AddButton({
+        Title = "head pet V2",
+        Description = "An accessory 3 is needed",
+        Callback = function()
+
+loadstring(game:HttpGet("https://raw.githubusercontent.com/randomstring0/Qwerty/refs/heads/main/qwerty56.lua"))()
 end})
 
 Tabs.Main:AddParagraph({
