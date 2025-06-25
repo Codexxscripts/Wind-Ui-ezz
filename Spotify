@@ -214,6 +214,14 @@ Tabs.Tools:AddButton({
 loadstring(game:HttpGet("https://raw.githubusercontent.com/EnesXVC/FireParts/main/Script"))()
 end})
 
+Tabs.Tools:AddButton({
+        Title = "Dia Delica Dance",
+        Description = "It's No fe script",
+        Callback = function()
+
+loadstring(game:HttpGet('https://pastebin.com/raw/XF4yJzBU'))("")
+end})
+
 SaveManager:SetLibrary(Fluent)
 InterfaceManager:SetLibrary(Fluent)
 
